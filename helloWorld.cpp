@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
 int main(){
-cout << "Hello CPTS_223 by Kobe" << endl;
+cout << "Hello world by Kobe" << endl;
 return 0;
 }
