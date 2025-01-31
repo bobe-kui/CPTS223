@@ -19,4 +19,5 @@ int main(void)
     int input = 4;
     cout << sumofn(input) << endl;
     return 0;
+
 }
