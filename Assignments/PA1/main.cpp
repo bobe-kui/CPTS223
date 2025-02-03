@@ -1,8 +1,9 @@
 #include "header.hpp"
+#include "functions.cpp"
+#include <iostream> 
 
 int main() {
 
     runApp();
-    //cout << "Hello World" << endl;
     return 0;
 }

@@ -1,0 +1,19 @@
+CPTS 223 Programming Assignment 1
+Author: Kobe Bui
+Date: February 2nd, 2025
+
+Linked List Advantages/Disadvantages
+
+Advantages: The linked list allows for memory to be dynamically allocated, so in the instance of creating a list of commands
+    there is a virtually limitless amount of commands that could be added to the list and the memory allocated is always at a minimum.
+
+Disadvantages: Because the list only has a member function pointing to the head node, the list must be iteratively tranversed which can take 
+    a long time if the list becomes too large.
+
+Array Advantages/Disadvantages
+
+Advantages: It is very easy to traverse the array for a specific element because each element is associated with an index number and the
+    time needed to find an element remains constant regardless of the size of the array.
+
+Disadvantages: The memory of an array is not dynamic and must be allocated once when it is created, leaving little flexibility if a dataset exceeds the
+    of the array. And when the data stored doesn't completely fill the array, there is allocated memory that is unused.
