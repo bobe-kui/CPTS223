@@ -1,30 +1,30 @@
-free,Show memory usage statistics,3
-env,Display or modify environment variables,4
-diff,Compare the differences between two files,2
-clear,Clear the terminal screen,1
-find,Search for files and directories based on conditions,4
-echo,Print text or variables to the terminal,2
-grep,Search for patterns within text files,3
-df,Show disk space usage for filesystems,3
-chown,Change file owner and group,3
-alias,Create shortcuts for commands,3
-cat,Concatenate and display file contents,3
-chmod,Change file permissions,3
-who,Show information about users currently logged into the system,3
-top,Display real-time system resource usage and running processes,2
-kill,Terminate a process by sending a signal,2
-ps,Display information about active processes,2
-make,Automate the build process using Makefiles,2
-gcc,Compile C source code into an executable,2
-g++,Compile C++ source code into an executable,2
-man,Display the manual page for a command,2
-scp,Securely copy files between hosts over SSH,2
-ssh,Securely connect to a remote machine using the SSH protocol,2
-pwd,Print working directory,1
-ls,List files and directories in current working directory,1
-cd,Change current working directory,1
-mkdir,Create a directory,1
-rmdir,Delete a directory,1
-rm,Delete a file,1
-cp,Copy,1
 mv,Move a file,1
+cp,Copy,1
+rm,Delete a file,1
+rmdir,Delete a directory,1
+mkdir,Create a directory,1
+cd,Change current working directory,1
+ls,List files and directories in current working directory,1
+pwd,Print working directory,1
+ssh,Securely connect to a remote machine using the SSH protocol,2
+scp,Securely copy files between hosts over SSH,2
+man,Display the manual page for a command,2
+g++,Compile C++ source code into an executable,2
+gcc,Compile C source code into an executable,2
+make,Automate the build process using Makefiles,2
+ps,Display information about active processes,2
+kill,Terminate a process by sending a signal,2
+top,Display real-time system resource usage and running processes,2
+who,Show information about users currently logged into the system,3
+chmod,Change file permissions,3
+cat,Concatenate and display file contents,3
+alias,Create shortcuts for commands,3
+chown,Change file owner and group,3
+df,Show disk space usage for filesystems,3
+grep,Search for patterns within text files,3
+echo,Print text or variables to the terminal,2
+find,Search for files and directories based on conditions,4
+clear,Clear the terminal screen,1
+diff,Compare the differences between two files,2
+env,Display or modify environment variables,4
+free,Show memory usage statistics,3

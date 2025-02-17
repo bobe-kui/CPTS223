@@ -1,0 +1,6 @@
+1. Does maching processing power affect execution time?
+    Machine processing power does affect execution time because more powerful machines will be able to execute individual tasks faster, 
+    which is why it is important when comparing algorithms to compare the amount of operations in an algorithm rather than time.
+
+2. Which performs better: std::list or std::vector? Under what conditions?
+    List performs better than vector, especially as the number of inputs increases to a large amount.
