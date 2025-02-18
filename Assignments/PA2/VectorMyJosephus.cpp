@@ -117,12 +117,12 @@ vector<Destination>::iterator VectorJosephus::pickDest()
     {
         while(this->currentSize() > 1)
         {
-            returnPos = this->eliminateDestination(currentDest);
+            returnPos = this->eliminateDestination(currentDest); // eliminates a destination until there is only one left
             outfile << returnPos << " ";
         }
     }
     outfile << endl << "Destination: " << this->vectDestinations.begin()->getName() << endl;
     outfile << "Position: " << this->vectDestinations.begin()->getPosition() << endl; 
     outfile.close();
-    return this->vectDestinations.begin();
+    return this->vectDestinations.begin(); // returns final destination in list
 }

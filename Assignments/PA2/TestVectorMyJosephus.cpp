@@ -24,17 +24,23 @@ double testVectorMain()
 
         VectorJosephus *testVect = new VectorJosephus(step, size);
         testVect->loadDestinations();
+        //start time
         k = clock();
         do start = clock();
         while(start == k);
+        //run and output final destination
         printDest = testVect->pickDest();
+        //end time
         end = clock();
+
+        //print results to terminal, results.log, and outputSequence.log
         sequenceOut << endl;
         cout << "Destination: ";
         printDest->printDestinationName();
         cout << endl << "Position: ";
         printDest->printPosition();
         cout << endl;
+        //add elapsed time to array
         times[size] = static_cast<double>(end - start) / CLOCKS_PER_SEC;
         sum+= times[size];
         cout << "Time Elapsed: " << times[size] << endl << endl;

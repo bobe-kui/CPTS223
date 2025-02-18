@@ -117,12 +117,12 @@ list<Destination>::iterator ListJosephus::pickDest()
     {
         while(this->currentSize() > 1)
         {
-            returnPos = this->eliminateDestination(currentDest);
+            returnPos = this->eliminateDestination(currentDest); // eliminates a destination until there is only one left
             outfile << returnPos << " ";
         }
     }
     outfile << endl << "Destination: " << this->listDestinations.begin()->getName() << endl;
     outfile << "Position: " << this->listDestinations.begin()->getPosition() << endl;
     outfile.close();
-    return this->listDestinations.begin(); 
+    return this->listDestinations.begin(); //returns final destination in list
 }
