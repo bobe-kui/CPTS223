@@ -37,7 +37,7 @@ double testListMain()
         times[size] = static_cast<double>(end - start) / CLOCKS_PER_SEC;
         sum+= times[size];
         cout << "Time Elapsed: " << times[size] << endl<< endl;
-        outfile << "List    " << size << "  " << times[size] << endl;
+        outfile << "List," << size << "," << times[size] << endl;
         delete testList;
     }
     average = sum / (size - 1);

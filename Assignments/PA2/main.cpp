@@ -5,7 +5,7 @@ int main(void){
 
     fstream outfile("outputSequence.log", ios::out);
     fstream results("results.log", ios::out);
-    results << "Method  N   Duration"<< endl;
+    results << "Method,N,Duration"<< endl;
     outfile.clear();
     outfile.close();
     results.close();
