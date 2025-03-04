@@ -1,36 +1,49 @@
 #ifndef AVLNODE_H
 #define AVLNODE_H
 
+
 template <class Key, class Value>
 class AVLNode{
 
 public:
     AVLNode();
-    AVLNode(Key newKey, Value newValue, AVLNode<Key, Value>* &newLeft, AVLNode<Key, Value>* &newRight, int newLeftBalance, int newRightBalance);
+    AVLNode(AVLNode<Key, Value> &node);//copy constructor
+    AVLNode(AVLNode<Key, Value> &&node);//move constructor
+    AVLNode(Key newKey, Value newValue, AVLNode<Key, Value>* newLeft, AVLNode<Key, Value>* newRight, int newLHeight, int newRHeight);
     ~AVLNode();
 
     void setKey(Key newKey);
     void setValue(Value newValue);
     void setLeft(AVLNode<Key,Value>* newLeft);
     void setRight(AVLNode<Key, Value>* newRight);
-    void setLeftBal(int newLeftBal);
-    void setRightBal(int newRightBal);
+    void setLHeight(int newLHeight);
+    void setRHeight(int newRHeight);
 
     Key getKey() const;
     Value getValue() const;
     AVLNode<Key, Value>* getLeft() const;
     AVLNode<Key, Value>* getRight() const;
-    int getLeftBal() const;
-    int getRightBal() const;
+    int getLHeight() const;
+    int getRHeight() const;
+
+    AVLNode& operator=(AVLNode& other) //copy operator
+    {
+        this->mKey = other.mKey;
+        this->mValue = other.mValue;
+        this->mLeft = other.mLeft;
+        this->mRight = other.mRight;
+        this->mLHeight = other.mLHeight;
+        this->mRHeight = other.mRHeight;
+        return *this;
+    }
 
 private:
     Key mKey;
     Value mValue;
     AVLNode<Key, Value>* mLeft;
     AVLNode<Key, Value>* mRight;
-    int mLBal;
-    int mRBal;
-
+    int mLHeight;
+    int mRHeight;
 };
 
 template <class Key, class Value>
@@ -38,19 +51,36 @@ AVLNode<Key, Value>::AVLNode()
 {
     this->mLeft = nullptr;
     this->mRight = nullptr;
-    this->mLBal = 0;
-    this->mRBal = 0;
+    this->mHeight = 0;
 }
 
 template <class Key, class Value>
-AVLNode<Key, Value>::AVLNode(Key newKey, Value newValue, AVLNode<Key, Value>* &newLeft, AVLNode<Key, Value>* &newRight, int newLeftBalance, int newRightBalance)
+AVLNode<Key, Value>::AVLNode(AVLNode<Key, Value> &node)
+{
+    this->mKey = node.mKey;
+    this->mValue = node.mValue;
+    this->mLeft = node.mLeft;
+    this->mRight = node.mRight;
+    this->mLHeight = node.mLHeight;
+    this->mRHeight = node.mRHeight;
+}
+
+template <class Key, class Value>
+AVLNode<Key, Value>::AVLNode(AVLNode<Key, Value> &&node)
+{
+    this = node;
+    delete node;
+}
+
+template <class Key, class Value>
+AVLNode<Key, Value>::AVLNode(Key newKey, Value newValue, AVLNode<Key, Value>* newLeft, AVLNode<Key, Value>* newRight, int newLHeight, int newRHeight)
 {
     this->mKey = newKey;
     this->mValue = newValue;
     this->mLeft = newLeft;
     this->mRight = newRight;
-    this->mLBal = newLeftBalance;
-    this->mRBal = newRightBalance;
+    this->mLHeight = newLHeight;
+    this->mRHeight = newRHeight;
 }
 
 template <class Key, class Value>
@@ -85,15 +115,15 @@ void AVLNode<Key, Value>::setRight(AVLNode<Key, Value>* newRight)
 }
 
 template <class Key, class Value>
-void AVLNode<Key, Value>::setLeftBal(int newLeftBal)
+void AVLNode<Key, Value>::setLHeight(int newLHeight)
 {
-    this->mLBal = newLeftBal;
+    this->mLHeight = newLHeight;
 }
 
 template <class Key, class Value>
-void AVLNode<Key, Value>::setRightBal(int newRightBal)
+void AVLNode<Key, Value>::setRHeight(int newRHeight)
 {
-    this->mRBal = newRightBal;
+    this->mRHeight = newRHeight;
 }
 
 template <class Key, class Value>
@@ -121,14 +151,15 @@ AVLNode<Key, Value>* AVLNode<Key, Value>::getRight() const
 }
 
 template <class Key, class Value>
-int AVLNode<Key, Value>::getLeftBal() const
+int AVLNode<Key, Value>::getLHeight() const
 {
-    return this->mLBal;
+    return this->mLHeight;
 }
 
 template <class Key, class Value>
-int AVLNode<Key, Value>::getRightBal() const
+int AVLNode<Key, Value>::getRHeight() const
 {
-    return this->mRBal;
+    return this->mRHeight;
 }
+
 #endif

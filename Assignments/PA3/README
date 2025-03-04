@@ -1,0 +1,12 @@
+1. 
+My implementation supports logarithmic insertion becuase each insertion requires at maximum log_2(n) moves along the tree with n items.
+My implementation supports logarithmic lookup because a search takes at maximum log_2(n) moves along the tree with n items.
+
+2. 
+AVL Trees maintain logarithmic performance by performing necessary rotations if any node in the tree has a height difference greater than 1,
+meaning that the tree will always be balanced when nodes are inserted or deleted.
+
+3. 
+The AVL tree and std::map data structures are very similar in their ability to maintain balance. The lookup operations for both structures 
+have similar average times. The map structure follows a red-black tree structure. The AVL trees cause more rotations to maintain stricter 
+balance which leads to more operations on insertion and deletion operations but it does mean that the AVL tree is usually more balanced than the map. 
