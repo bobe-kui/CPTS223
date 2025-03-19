@@ -14,6 +14,7 @@ public:
     PrinterJob(string str, int pri);
     
     bool operator<(const PrinterJob& other) const;
+    PrinterJob& operator=(const PrinterJob& other);
 };
 
 #endif // PRINTERJOB_H

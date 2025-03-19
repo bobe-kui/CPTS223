@@ -10,3 +10,12 @@ PrinterJob::PrinterJob(string str, int pri) : printString(str), priority(pri) {}
 bool PrinterJob::operator<(const PrinterJob& other) const {
     return priority < other.priority; // Lower number means higher priority
 }
+
+PrinterJob& PrinterJob::operator=(const PrinterJob& other)
+{
+    if (this != &other) {
+        this->printString = other.printString;
+        this->priority = other.priority;
+    }
+    return *this;
+}
