@@ -65,7 +65,6 @@ vector<string> parseCategories(string catLine)
 void readFile(HashTable<Item>& IDHash, HashTable<Item>& CatHash)
 {
     ifstream infile("marketing_sample_for_amazon_com-ecommerce__20200101_20200131__10k_data.csv", ios::in);
-    //ifstream infile("test.csv", ios::in);
     if (!infile.is_open()) {
         cerr << "Error: Unable to open file." << endl;
         return;
